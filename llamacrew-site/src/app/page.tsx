@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function Component() {
+export default function Home() {
   return (
     <div key="1" className="flex flex-col min-h-[100dvh] bg-white">
       <header className="px-4 lg:px-6 h-14 flex items-center justify-between">
@@ -53,8 +53,6 @@ export default function Component() {
     </div>
   )
 }
-
-
 
 
 
