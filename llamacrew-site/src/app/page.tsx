@@ -12,7 +12,7 @@ export default function Home() {
           </h1>
           <p className="text-lg text-gray-900">
             {`
-          Meta, Cohere, and LangChain powered agents
+          open source powered artificial intelligence
         `}
           </p>
           <div className="flex justify-center gap-4">
