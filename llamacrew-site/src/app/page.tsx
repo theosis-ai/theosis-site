@@ -1,4 +1,5 @@
 import Link from "next/link"
+// import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
         `}
           </p>
           <div className="flex justify-center gap-4">
-          <Link className="flex" href="https://github.com/agntk">
+          <Link className="flex" href="https://github.com/agntk" target="_blank">
             <svg 
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -32,7 +33,23 @@ export default function Home() {
               <path d="M9 18c-4.51 2-5-2-7-2" />
             </svg>
           </Link>
-            </div>
+          {/*<Link className="flex" href="https://huggingface.co/Agntk" target="_blank">*/}
+          {/*  <Image*/}
+          {/*    src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo-pirate.svg"*/}
+          {/*    width={28}*/}
+          {/*    height={28}*/}
+          {/*   alt={""}/>*/}
+          {/*</Link>*/}
+          </div>
+          <div className="flex justify-center gap-4">
+          <Link className="flex" href="https://www.jxtngx.dev">
+            <p className="text-lg text-gray-900">
+              {`
+          cookbook
+        `}
+            </p>
+          </Link>
+          </div>
         </section>
       </main>
     </div>
