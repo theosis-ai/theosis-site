@@ -42,7 +42,7 @@ export default function Home() {
           {/*</Link>*/}
           </div>
           <div className="flex justify-center gap-4">
-          <Link className="flex" href="https://www.jxtngx.dev">
+          <Link className="flex" href="https://cookbook.agntk.com/">
             <p className="text-lg text-gray-900">
               {`
           cookbook
