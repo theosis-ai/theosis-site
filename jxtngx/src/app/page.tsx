@@ -9,15 +9,15 @@ export default function Home() {
       <main className="flex-1 flex flex-col items-center justify-center px-4 md:px-6">
         <section className="max-w-2xl text-center space-y-6">
           <h1 className="text-4xl font-roboto tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-            AGNTK
+            JXTNGX
           </h1>
           <p className="text-lg text-gray-900">
             {`
-          open source powered artificial intelligence
+          Open Source Generative Artificial Intelligence
         `}
           </p>
           <div className="flex justify-center gap-4">
-          <Link className="flex" href="https://github.com/agntk" target="_blank">
+          <Link className="flex" href="https://github.com/jxtngx" target="_blank">
             <svg 
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -33,19 +33,21 @@ export default function Home() {
               <path d="M9 18c-4.51 2-5-2-7-2" />
             </svg>
           </Link>
-          {/*<Link className="flex" href="https://huggingface.co/Agntk" target="_blank">*/}
-          {/*  <Image*/}
-          {/*    src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo-pirate.svg"*/}
-          {/*    width={28}*/}
-          {/*    height={28}*/}
-          {/*   alt={""}/>*/}
-          {/*</Link>*/}
           </div>
           <div className="flex justify-center gap-4">
-          <Link className="flex" href="https://cookbook.agntk.com/">
+          <Link className="flex" href="https://cookbook.jxtngx.ai/">
             <p className="text-lg text-gray-900">
               {`
-          cookbook
+          Gen AI Cookbook
+        `}
+            </p>
+          </Link>
+          </div>
+          <div className="flex justify-center gap-4">
+          <Link className="flex" href="https://theaiengineer.substack.com">
+            <p className="text-lg text-gray-900">
+              {`
+          The AI Engineer Blog
         `}
             </p>
           </Link>
@@ -55,7 +57,3 @@ export default function Home() {
     </div>
   )
 }
-
-
-
-
