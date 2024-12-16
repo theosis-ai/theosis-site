@@ -35,7 +35,7 @@ export default function Home() {
           </Link>
           </div>
           <div className="flex justify-center gap-4">
-          <Link className="flex" href="https://cookbook.jxtngx.ai/">
+          <Link className="flex" href="https://cookbook.jxtngx.ai/docs/home">
             <p className="text-lg text-gray-900">
               {`
           Gen AI Cookbook
