@@ -1,4 +1,6 @@
 import Link from "next/link"
+import Icon from '@mui/material/Icon';
+import NorthEastIcon from '@mui/icons-material/NorthEast';
 // import Image from 'next/image'
 
 export default function Home() {
@@ -11,9 +13,9 @@ export default function Home() {
           <h1 className="text-4xl font-roboto tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
             JXTNGX
           </h1>
-          <p className="text-lg text-gray-900">
+          <p className="text-xl font-roboto tracking-tight text-gray-900 sm:text-xl md:text-2xl">
             {`
-          Open Source Generative Artificial Intelligence
+          Open Source Artificial Intelligence
         `}
           </p>
           <div className="flex justify-center gap-4">
@@ -35,20 +37,22 @@ export default function Home() {
           </Link>
           </div>
           <div className="flex justify-center gap-4">
-          <Link className="flex" href="https://cookbook.jxtngx.ai/docs/home">
+          <Link className="flex" href="https://cookbook.jxtngx.ai/docs/home" target="_blank">
             <p className="text-lg text-gray-900">
               {`
-          Gen AI Cookbook
+          Gen AI with NVIDIA NeMo
         `}
+            <NorthEastIcon className="text-lg text-gray-900"/>
             </p>
           </Link>
           </div>
           <div className="flex justify-center gap-4">
-          <Link className="flex" href="https://theaiengineer.substack.com">
+          <Link className="flex" href="https://theaiengineer.substack.com" target="_blank">
             <p className="text-lg text-gray-900">
               {`
           The AI Engineer Blog
         `}
+           <NorthEastIcon className="text-lg text-gray-900"/>
             </p>
           </Link>
           </div>
