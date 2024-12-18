@@ -29,7 +29,7 @@ export default function Home() {
           <Link className="flex" href="https://cookbook.jxtngx.ai/docs/home" target="_blank">
             <p className="text-lg text-gray-900">
               {`
-          NeMo Gen AI Cookbook
+          Gen AI Cookbook
         `}
             <NorthEastIcon className="text-lg text-gray-900"/>
             </p>
