@@ -36,6 +36,16 @@ export default function Home() {
           </Link>
           </div>
           <div className="flex justify-center gap-4">
+          <Link className="flex" href="https://github.com/jxtngx/nemo-lab" target="_blank">
+            <p className="text-lg text-gray-900">
+              {`
+          NeMo Lab
+        `}
+            <NorthEastIcon className="text-lg text-gray-900"/>
+            </p>
+          </Link>
+          </div>
+          <div className="flex justify-center gap-4">
           <Link className="flex" href="https://theaiengineer.substack.com" target="_blank">
             <p className="text-lg text-gray-900">
               {`
