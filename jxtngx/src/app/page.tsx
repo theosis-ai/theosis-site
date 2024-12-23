@@ -11,7 +11,7 @@ export default function Home() {
       <header className="px-4 lg:px-6 h-14 flex items-center justify-between">
       </header>
       <main className="flex-1 flex flex-col items-center justify-center px-4 md:px-6">
-        <section className="max-w-2xl text-center space-y-6">
+        <section className="max-w-2xl text-center space-y-2">
           <h1 className="text-4xl font-roboto tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
             JXTNGX
           </h1>
@@ -20,12 +20,19 @@ export default function Home() {
           Open Source Artificial Intelligence
         `}
           </p>
+        </section>
+        <br></br>
+        <section className="max-w-2xl text-center">
+
           <div className="flex justify-center gap-4">
             <Link className="flex" href="https://github.com/jxtngx" target="_blank">
                 <GitHubIcon fontSize="large"/>
             </Link>
           </div>
-          <div className="flex justify-center gap-4">
+        </section>
+        <br></br>
+        <section className="max-w-2xl text-center space-y-2">
+        <div className="flex justify-center gap-4">
             <Link className="flex" href="https://cookbook.jxtngx.ai/docs/home" target="_blank">
               <p className="text-lg text-gray-900">
                 {`
@@ -55,7 +62,10 @@ export default function Home() {
               </p>
             </Link>
           </div>
-          <div className="flex justify-center gap-4">
+        </section>
+        <br></br>
+        <section className="max-w-2xl text-center">
+        <div className="flex justify-center gap-4">
             <Link className="flex" href="https://www.youtube.com/@AnAiEngineer" target="_blank">
                   <YouTubeIcon fontSize="medium"/>
             </Link>
