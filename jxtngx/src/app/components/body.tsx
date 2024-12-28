@@ -35,7 +35,7 @@ export default function Body() {
             </div>
             <div className="flex justify-center gap-4">
                 <Link className="flex" href="https://agents.jxtngx.ai/" target="_blank">
-                    <p className="text-lg text-gray-900">Agents Cookbook</p>
+                    <p className="text-lg text-gray-900">Agent Cookbook</p>
                     <svg aria-hidden="true" className="navbar_externalArrow___VWBd" height="7" viewBox="0 0 6 6"
                          width="7">
                         <path
