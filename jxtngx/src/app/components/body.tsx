@@ -23,8 +23,8 @@ export default function Body() {
                 </Link>
             </div>
             <div className="flex justify-center gap-4">
-                <Link className="flex" href="https://agents.jxtngx.ai/" target="_blank">
-                    <p className="text-lg text-gray-900">Agents Cookbook</p>
+                <Link className="flex" href="https://deeplearning.jxtngx.ai/" target="_blank">
+                    <p className="text-lg text-gray-900">Deep Learning Cookbook</p>
                     <svg aria-hidden="true" className="navbar_externalArrow___VWBd" height="7" viewBox="0 0 6 6"
                          width="7">
                         <path
@@ -34,8 +34,8 @@ export default function Body() {
                 </Link>
             </div>
             <div className="flex justify-center gap-4">
-                <Link className="flex" href="https://hpc.jxtngx.ai/" target="_blank">
-                    <p className="text-lg text-gray-900">HPC Cookbook</p>
+                <Link className="flex" href="https://agents.jxtngx.ai/" target="_blank">
+                    <p className="text-lg text-gray-900">Agents Cookbook</p>
                     <svg aria-hidden="true" className="navbar_externalArrow___VWBd" height="7" viewBox="0 0 6 6"
                          width="7">
                         <path
