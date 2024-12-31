@@ -10,7 +10,7 @@ export default function Footer() {
                   <YouTubeIcon fontSize="medium"/>
             </Link>
             <hr></hr>
-            <Link className="flex" href="https://www.linkedin.com/in/jxtngx/" target="_blank">
+            <Link className="flex" href="https://www.linkedin.com/company/theosis-ai/" target="_blank">
                   <LinkedInIcon fontSize="medium"/>
             </Link>
             <hr></hr>

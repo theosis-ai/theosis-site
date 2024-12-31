@@ -1,18 +1,17 @@
 import Link from "next/link"
 import GitHubIcon from '@mui/icons-material/GitHub';
-import NorthEastIcon from '@mui/icons-material/NorthEast';
 
 export default function Body() {
     return (
         <section className="max-w-2xl text-center space-y-3.5">
             <div className="flex justify-center gap-4">
-                <Link className="flex" href="https://github.com/jxtngx" target="_blank">
+                <Link className="flex" href="https://github.com/theosis" target="_blank">
                     <GitHubIcon fontSize="large"/>
                 </Link>
             </div>
             <br></br>
             <div className="flex justify-center gap-4">
-                <Link className="flex" href="https://agents.jxtngx.ai/" target="_blank">
+                <Link className="flex" href="https://agents.theosis.ai/" target="_blank">
                     <p className="text-lg text-gray-900">Agent Cookbook</p>
                     <svg aria-hidden="true" className="navbar_externalArrow___VWBd" height="7" viewBox="0 0 6 6"
                          width="7">
@@ -23,7 +22,7 @@ export default function Body() {
                 </Link>
             </div>
             <div className="flex justify-center gap-4">
-                <Link className="flex" href="https://github.com/jxtngx/nemo-lab" target="_blank">
+                <Link className="flex" href="https://github.com/theosis-ai/nemo-lab" target="_blank">
                     <p className="text-lg text-gray-900">NeMo Lab</p>
                     <svg aria-hidden="true" className="navbar_externalArrow___VWBd" height="7" viewBox="0 0 6 6"
                          width="7">
@@ -34,7 +33,7 @@ export default function Body() {
                 </Link>
             </div>
             <div className="flex justify-center gap-4">
-                <Link className="flex" href="https://nemo.jxtngx.ai/" target="_blank">
+                <Link className="flex" href="https://nemo.theosis.ai/" target="_blank">
                     <p className="text-lg text-gray-900">NeMo Cookbook</p>
                     <svg aria-hidden="true" className="navbar_externalArrow___VWBd" height="7" viewBox="0 0 6 6"
                          width="7">
