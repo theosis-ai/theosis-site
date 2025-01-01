@@ -5,7 +5,7 @@ export default function Body() {
     return (
         <section className="max-w-2xl text-center space-y-3.5">
             <div className="flex justify-center gap-4">
-                <Link className="flex" href="https://github.com/theosis" target="_blank">
+                <Link className="flex" href="https://github.com/theosis-ai" target="_blank">
                     <GitHubIcon fontSize="large"/>
                 </Link>
             </div>
