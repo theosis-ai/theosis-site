@@ -2,29 +2,28 @@
 // Learn more: https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required
 
 
-import { Roboto } from 'next/font/google'
-import { Inter } from 'next/font/google'
+import { Geist, Geist_Mono } from 'next/font/google'
 import { Props } from "./types"
 import './globals.css'
 
 
-const roboto = Roboto({
+const mono = Geist_Mono({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-roboto',
+  variable: '--font-mono',
   weight: ['400']
 })
-const inter = Inter({
+const sans = Geist({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-mono',
   weight: ['300']
 })
 
 export default function Layout({ children }: Props) {
   return (
     <html lang="en">
-      <body className={roboto.variable + ' ' + inter.variable}>
+      <body className={mono.variable + ' ' + sans.variable}>
         {children}
       </body>
     </html>
