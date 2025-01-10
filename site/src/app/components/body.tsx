@@ -32,7 +32,7 @@ export default function Body() {
                 </Link>
             </div>
             <div className="flex justify-center ">
-                <Link className="flex" href="https://tuning.theosis.ai/" target="_blank">
+                <Link className="flex" href="https://nemo.theosis.ai/" target="_blank">
                     <p className="text-lg text-gray-900">NeMo Cookbook</p>
                     <svg aria-hidden="true" className="navbar_externalArrow___VWBd" height="7" viewBox="0 0 6 6"
                          width="7">
