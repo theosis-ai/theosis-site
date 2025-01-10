@@ -3,7 +3,7 @@ import GitHub from "@/app/icons/github"
 
 export default function Body() {
     return (
-        <section className="max-w-2xl font-mono text-center space-y-4">
+        <section className="max-w-2xl font-sans text-center space-y-2">
             <div className="flex justify-center ">
                 <Link className="flex" href="https://github.com/theosis-ai" target="_blank">
                     <GitHub />

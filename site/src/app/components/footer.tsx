@@ -3,7 +3,7 @@ import YouTubeIcon from '@/app/icons/youtube'
 
 export default function Footer() {
     return (
-        <section className="max-w-2xl font-mono text-center">
+        <section className="max-w-2xl font-sans text-center">
         <div className="flex justify-center gap-4">
             <Link className="flex" href="https://www.youtube.com/@AnAiEngineer" target="_blank">
                   <YouTubeIcon/>
