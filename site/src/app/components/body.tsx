@@ -16,8 +16,8 @@ export default function Body() {
             <div className="grid gap-4">
                 {[
                     { href: "https://agents.theosis.ai/", text: "Agent Cookbook" },
-                    { href: "https://github.com/theosis-ai/tuning-lab", text: "NeMo Lab" },
-                    { href: "https://nemo.theosis.ai/", text: "NeMo Cookbook" },
+                    { href: "https://github.com/theosis-ai/torch-lab", text: "Torch Lab" },
+                    { href: "https://torch.theosis.ai/", text: "Torch Cookbook" },
                     { href: "https://huggingface.co/TheosisAI", text: "Hugging Face" },
                     { href: "https://theaiengineer.substack.com", text: "The AI Engineer Substack" },
                 ].map((link) => (
