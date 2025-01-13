@@ -14,7 +14,7 @@ export default function Footer() {
                 </Link>
             </div>
             <p className="text-sm text-mono text-neutral-500">
-                © {new Date().getFullYear()} Theosis AI
+                © {new Date().getFullYear()} Theosis AI, Justin Goheen
             </p>
         </section>
     );
