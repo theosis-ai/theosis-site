@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <section className="max-w-2xl font-sans text-center space-y-6">
             <div className="flex justify-center gap-4">
-                <Link className="flex hover:opacity-80 transition-opacity" 
+                <Link className="flex hover:opacity-80 transition-opacity text-neutral-500" 
                       href="https://www.youtube.com/@AnAiEngineer" 
                       target="_blank"
                       rel="noopener noreferrer"
