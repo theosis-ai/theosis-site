@@ -133,3 +133,4 @@ dist
 *.idea/
 
 .DS_Store
+*.code-workspace
