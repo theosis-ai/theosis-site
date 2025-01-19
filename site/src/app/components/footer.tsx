@@ -1,6 +1,6 @@
 import Link from "next/link"
 import YouTubeIcon from '@/app/components/ui/youtube'
-import { Linkedin } from 'lucide-react';
+import LinkedIn from '@/app/components/ui/linkedin'
 
 export default function Footer() {
     return (
@@ -18,10 +18,10 @@ export default function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="YouTube Channel">
-                    <Linkedin width="24" height="24" viewBox="0 0 24 24"/>
+                    <LinkedIn/>
                 </Link>
             </div>
-            <p className="text-sm text-mono text-neutral-500">
+            <p className="text-[0.625rem] text-mono text-neutral-500">
                 © {new Date().getFullYear()} Theosis AI, Justin Goheen
             </p>
         </section>
