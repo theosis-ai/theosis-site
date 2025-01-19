@@ -14,7 +14,7 @@ export default function Footer() {
                     <YouTubeIcon/>
                 </Link>
                 <Link className="flex hover:opacity-80 transition-opacity text-neutral-500" 
-                      href="https://www.linkedin.com/in/jxtngx" 
+                      href="https://www.linkedin.com/company/theosis-ai" 
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="YouTube Channel">
