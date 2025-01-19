@@ -1,5 +1,6 @@
 import Link from "next/link"
 import YouTubeIcon from '@/app/components/ui/youtube'
+import { Linkedin } from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -11,6 +12,13 @@ export default function Footer() {
                       rel="noopener noreferrer"
                       aria-label="YouTube Channel">
                     <YouTubeIcon/>
+                </Link>
+                <Link className="flex hover:opacity-80 transition-opacity text-neutral-500" 
+                      href="https://www.linkedin.com/in/jxtngx" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="YouTube Channel">
+                    <Linkedin width="24" height="24" viewBox="0 0 24 24"/>
                 </Link>
             </div>
             <p className="text-sm text-mono text-neutral-500">
