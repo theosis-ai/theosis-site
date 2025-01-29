@@ -1,23 +1,14 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { GeistMono } from "geist/font/mono"
+import { GeistSans } from "geist/font/sans"
 import { Props } from "./types"
 
 
 const baseUrl = 'https://theosis.ai'
 
-const fontMono = Geist_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-mono',
-  weight: ['400']
-})
-const fontSans = Geist({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-sans',
-  weight: ['300']
-})
+const fontSans = GeistSans
+const fontMono = GeistMono
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -53,6 +44,7 @@ export default function Layout({ children }: Props) {
     <html lang="en">
       <body className={fontMono.variable + ' ' + fontSans.variable}>
         {children}
+        
       </body>
     </html>
   )

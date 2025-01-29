@@ -4,7 +4,7 @@ import LinkedIn from '@/app/components/ui/linkedin'
 
 export default function Footer() {
     return (
-        <section className="max-w-2xl font-sans text-center space-y-6">
+        <section className="max-w-2xl font-mono text-center space-y-6">
             <div className="flex justify-center gap-4">
                 <Link className="flex hover:opacity-80 transition-opacity text-neutral-500" 
                       href="https://www.youtube.com/@AnAiEngineer" 
@@ -21,7 +21,7 @@ export default function Footer() {
                     <LinkedIn/>
                 </Link>
             </div>
-            <p className="text-[0.625rem] text-mono text-neutral-500">
+            <p className="text-[0.625rem] font-mono text-neutral-500">
                 © {new Date().getFullYear()} Theosis AI, Justin Goheen
             </p>
         </section>
