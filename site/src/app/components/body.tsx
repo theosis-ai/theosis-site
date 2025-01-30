@@ -1,5 +1,6 @@
 import Link from "next/link"
 import GitHub from "@/app/components/ui/github"
+import { ExternalLink } from 'lucide-react';
 
 export default function Body() {
     return (
@@ -15,11 +16,12 @@ export default function Body() {
             </div>
             <div className="grid gap-4">
                 {[
-                    { href: "https://torch.theosis.ai/", text: "Torch Cookbook" },
+                    // { href: "https://torch.theosis.ai/", text: "Torch Cookbook" },
+                    { href: "https://github.com/theosis-ai/llama-lab", text: "Llama Lab" },
                     { href: "https://github.com/theosis-ai/torch-stack", text: "Torch Stack" },
+                    // { href: "https://llama.theosis.ai/", text: "Llama Cookbook" },
                     { href: "https://github.com/theosis-ai/torch-lab", text: "Torch Lab" },
-                    { href: "https://llama.theosis.ai/", text: "Llama Cookbook" },
-                    { href: "https://theaiengineer.substack.com", text: "The AI Engineer Substack" },
+                    { href: "https://theaiengineer.substack.com", text: "The AI Engineer" },
                 ].map((link) => (
                     <Link key={link.href}
                           className="flex justify-center items-center hover:opacity-80 transition-opacity" 
@@ -27,10 +29,7 @@ export default function Body() {
                           target="_blank"
                           rel="noopener noreferrer">
                         <p className="text-lg text-gray-800">{link.text}</p>
-                        <svg aria-hidden="true" className="ml-1" height="7" viewBox="0 0 6 6" width="7">
-                            <path d="M1.25215 5.54731L0.622742 4.9179L3.78169 1.75597H1.3834L1.38936 0.890915H5.27615V4.78069H4.40513L4.41109 2.38538L1.25215 5.54731Z" 
-                                  fill="currentColor"/>
-                        </svg>
+                        <ExternalLink className="ml-1" height="12" width="12"/>
                     </Link>
                 ))}
             </div>

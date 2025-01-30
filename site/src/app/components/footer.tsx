@@ -22,7 +22,7 @@ export default function Footer() {
                 </Link>
             </div>
             <p className="text-[0.625rem] font-mono text-neutral-500">
-                © {new Date().getFullYear()} Theosis AI, Justin Goheen
+                © {new Date().getFullYear()} Theosis AI
             </p>
         </section>
     );
