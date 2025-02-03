@@ -20,7 +20,7 @@ export default function Body() {
                     // { href: "https://github.com/theosis-ai/llama-lab", text: "Llama Lab" },
                     // { href: "https://github.com/theosis-ai/torch-stack", text: "Torch Stack" },
                     // { href: "https://llama.theosis.ai/", text: "Llama Cookbook" },
-                    { href: "https://github.com/theosis-ai/torch-lab", text: "Torch Lab" },
+                    { href: "https://github.com/theosis-ai/tune-lab", text: "Tune Lab" },
                     { href: "https://theaiengineer.substack.com", text: "The AI Engineer" },
                 ].map((link) => (
                     <Link key={link.href}
