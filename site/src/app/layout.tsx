@@ -7,8 +7,6 @@ import { Props } from "./types"
 
 const baseUrl = 'https://theosis.ai'
 
-const fontSans = GeistSans
-const fontMono = GeistMono
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -42,9 +40,8 @@ export const metadata: Metadata = {
 export default function Layout({ children }: Props) {
   return (
     <html lang="en">
-      <body className={fontMono.variable + ' ' + fontSans.variable}>
+      <body className={GeistMono.variable + ' ' + GeistSans.variable}>
         {children}
-        
       </body>
     </html>
   )
