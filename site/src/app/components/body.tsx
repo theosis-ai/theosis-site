@@ -5,7 +5,7 @@ import { ExternalLink } from 'lucide-react';
 export default function Body() {
     return (
         <section className="max-w-2xl font-sans text-center space-y-6">
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-4">
                 <Link className="flex items-center hover:opacity-80 transition-opacity" 
                       href="https://github.com/theosis-ai" 
                       target="_blank"
