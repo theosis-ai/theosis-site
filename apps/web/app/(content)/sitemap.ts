@@ -1,7 +1,7 @@
 import { getBlogPosts } from "@/lib/getBlogPosts";
 import { getCookbookPosts } from "@/lib/getCookbookPosts";
 
-export const baseUrl = "https://tunelab.theosis.ai";
+export const baseUrl = "https://theosis.ai";
 
 export default async function sitemap() {
   const blog_posts = getBlogPosts().map((post) => ({
