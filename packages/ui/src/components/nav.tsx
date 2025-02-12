@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link";
 import ModeSwitcher from "@workspace/ui/components/modeSwitcher";
-import { House, Menu } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import {
   Menubar,
   MenubarContent,
