@@ -31,16 +31,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en">
-        <body
-          className={`${GeistSans.variable} ${GeistMono.variable} antialiased min-h-screen flex flex-col`}
-        >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <Nav />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </ThemeProvider>
-        </body>
-      </html>
+    <html lang="en">
+      <body
+        className={`${GeistSans.variable} ${GeistMono.variable} antialiased min-h-screen flex flex-col`}
+      >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Nav />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

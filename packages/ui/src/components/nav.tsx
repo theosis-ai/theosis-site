@@ -1,27 +1,54 @@
 "use client";
 
+import * as React from "react"
 import Link from "next/link";
 import ModeSwitcher from "@workspace/ui/components/modeSwitcher";
-import { House } from 'lucide-react';
+import { House, Menu } from 'lucide-react';
+import {
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarTrigger,
+} from "@workspace/ui/components/menubar"
 
 export default function Nav() {
+  const [isOpen, setIsOpen] = React.useState(false)
 
   return (
+
     <nav className="flex items-center justify-between mt-8 ml-4 mr-4 mb-4 sm:ml-12 sm:mr-12">
-      <div className="flex flex-1 justify-left gap-6 ml-4">
-        <Link className="items-center flex gap-1" href="/">
-          <House className="h-4 w-4"/>
-        </Link>
-        <Link className="items-center flex gap-1" href="/cookbook">
-          Cookbook
-        </Link>
-        <Link className="items-center flex gap-1" href="/blog">
-          Blog
-        </Link>
-      </div>
+      <Menubar>
+        <MenubarMenu >
+          <MenubarTrigger >
+            <Menu className="h-4 w-4"/>
+          </MenubarTrigger>
+          <MenubarContent >
+            <MenubarItem asChild>
+            <Link className="items-center flex gap-1" href="/"  >
+                Home
+            </Link>
+            </MenubarItem>
+            <MenubarItem asChild>
+              <Link className="items-center flex gap-1" href="/cookbook" >
+                  Cookbook
+              </Link>
+            </MenubarItem>
+            <MenubarItem asChild>
+              <Link className="items-center flex gap-1" href="/blog">
+                  Blog
+                </Link>
+            </MenubarItem>
+          </MenubarContent>
+        </MenubarMenu>
+      </Menubar>
       <div className="flex flex-1 justify-end">
         <ModeSwitcher />
       </div>
     </nav>
-  );
+  )
 }
+
+
