@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react"
+
 import Link from "next/link";
 import ModeSwitcher from "@workspace/ui/components/modeSwitcher";
 import { Menu } from 'lucide-react';
@@ -13,7 +13,6 @@ import {
 } from "@workspace/ui/components/menubar"
 
 export default function Nav() {
-  const [isOpen, setIsOpen] = React.useState(false)
 
   return (
 
