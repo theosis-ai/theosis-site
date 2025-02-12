@@ -11,6 +11,7 @@ export default function ModeSwitcher() {
     <Button
       variant="ghost"
       className="group/toggle"
+      size="sm"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       <span className="sr-only">Toggle mode</span>

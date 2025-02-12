@@ -12,14 +12,15 @@ import {
   MenubarTrigger,
 } from "@workspace/ui/components/menubar"
 
+
+
 export default function Nav() {
 
   return (
-
     <nav className="flex items-center justify-between mt-8 ml-4 mr-4 mb-4 sm:ml-12 sm:mr-12">
       <Menubar>
         <MenubarMenu >
-          <MenubarTrigger >
+          <MenubarTrigger className="group/toggle hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3" >
             <Menu className="h-4 w-4" />
           </MenubarTrigger>
           <MenubarContent >
