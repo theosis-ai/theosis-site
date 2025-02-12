@@ -16,9 +16,8 @@ export default function Body() {
             </div>
             <div className="grid gap-4">
                 {[
-                    // { href: "https://github.com/theosis-ai/llama-lab", text: "Llama Lab" },
-                    { href: "https://github.com/theosis-ai/tune-lab", text: "Tune Lab" },
-                    // { href: "https://theaiengineer.substack.com", text: "The AI Engineer" },
+                    { href: "https://tunelab.theosis.ai", text: "Tune Lab" },
+                    { href: "https://llamalab.theosis.ai", text: "Llama Lab" },
                 ].map((link) => (
                     <Link key={link.href}
                           className="flex justify-center items-center hover:opacity-80 transition-opacity" 
