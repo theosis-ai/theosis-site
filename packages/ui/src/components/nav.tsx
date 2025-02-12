@@ -20,7 +20,7 @@ export default function Nav() {
       <Menubar>
         <MenubarMenu >
           <MenubarTrigger >
-            <Menu className="h-4 w-4"/>
+            <Menu className="h-4 w-4" />
           </MenubarTrigger>
           <MenubarContent >
             <MenubarItem asChild>

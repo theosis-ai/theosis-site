@@ -22,7 +22,7 @@ export function BlogPosts() {
   const allPosts = getBlogPosts();
 
   return (
-    <div>
+    <div >
       {allPosts
         .sort((a, b) => {
           if (a.metadata.position < b.metadata.position) {
@@ -36,11 +36,9 @@ export function BlogPosts() {
             className="flex flex-col space-y-2 mb-4"
             href={`/blog/${post.slug}`}
           >
-            <div className="flex flex-col items-center md:flex-row space-x-0 md:space-x-2">
-              <ArrowIcon />
-              <hr></hr>
-              <p className="w-[150px]">{post.metadata.title}</p>
-              <p className="w-[300px] tabular-nums">{post.metadata.subtitle}</p>
+            <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2 ">
+              <p className="w-[200px] tabular-nums">{post.metadata.title}</p>
+              <p >{post.metadata.subtitle}</p>
             </div>
           </Link>
         ))}
