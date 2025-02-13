@@ -8,10 +8,7 @@ export function CookbookPosts() {
     <div >
       {allPosts
         .sort((a, b) => {
-          if (a.metadata.position < b.metadata.position) {
-            return -1;
-          }
-          return 1;
+          return (a.metadata.position || 0) - (b.metadata.position || 0);
         })
         .map((post) => (
           <Link
