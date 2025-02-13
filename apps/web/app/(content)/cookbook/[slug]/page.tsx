@@ -67,7 +67,7 @@ export default async function Blog({ params }: PageProps) {
   }
 
   return (
-    <section className="mx-auto w-full max-w-xl overflow-y-hidden">
+    <section className="mx-auto w-full max-w-2xl overflow-y-hidden">
       <script
         type="application/ld+json"
         suppressHydrationWarning
