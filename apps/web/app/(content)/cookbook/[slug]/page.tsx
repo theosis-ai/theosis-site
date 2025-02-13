@@ -105,7 +105,27 @@ export default async function Blog({ params }: PageProps) {
           {formatDate(post.metadata.publishedAt)}
         </p>
       </div> */}
-      <article className="prose">
+      <article className="prose max-w-none
+        prose-headings:mt-8 
+        prose-headings:font-semibold 
+        prose-headings:text-foreground
+        prose-h1:text-2xl
+        prose-h2:text-xl
+        prose-h3:text-lg
+        prose-h4:text-base
+        prose-h5:text-sm
+        prose-h6:text-xs
+        prose-p:text-foreground
+        prose-a:text-primary hover:prose-a:opacity-80
+        prose-strong:text-foreground
+        prose-code:text-primary prose-code:bg-muted
+        prose-pre:bg-muted prose-pre:text-foreground
+        dark:prose-invert
+        dark:prose-headings:text-foreground
+        dark:prose-p:text-foreground
+        dark:prose-strong:text-foreground
+        dark:prose-code:text-primary dark:prose-code:bg-muted
+        dark:prose-pre:bg-muted dark:prose-pre:text-foreground">
         <CustomMDX source={post.content} />
       </article>
     </section>
