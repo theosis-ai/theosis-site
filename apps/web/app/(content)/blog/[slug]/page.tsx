@@ -96,7 +96,7 @@ export default async function Blog({ params }: PageProps) {
         {post.metadata.title}
       </h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-lg tracking-tighter text-neutral-600 dark:text-neutral-400">
+        <p className="text-lg tracking-tighter ">
           {post.metadata.subtitle}
         </p>
       </div>

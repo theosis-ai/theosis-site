@@ -37,7 +37,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Nav />
-          <main className="flex-1 max-w-xl mx-4 lg:mx-auto">{children}</main>
+          <main className="flex-1 max-w-l mx-4">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
