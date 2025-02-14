@@ -40,7 +40,7 @@ export function CookbookPosts() {
                     {post.metadata.subtitle}
                   </span>
                   <Button
-                    className="mb-4 text-xs font-bold tracking-tight h-[calc(theme(spacing.7)_-_1px)]"
+                    className="mb-4 text-xs font-semibold text-muted-foreground tracking-tight h-[calc(theme(spacing.7)_-_1px)]"
                     variant="box"
                     size="sm"
                   >
