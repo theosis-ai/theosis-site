@@ -8,6 +8,8 @@ type Metadata = {
   summary: string;
   image?: string;
   position: any;
+  draft: boolean;
+  tag?: string;
 };
 
 function parseFrontmatter(fileContent: string) {
@@ -58,10 +60,52 @@ function getMDXData(dir: string) {
   });
 }
 
-export function getCookbookPosts() {
-  return getMDXData(
-    path.join(process.cwd(), "app", "(content)", "cookbook", "posts"),
+function getAllMDXFiles(dir: string): string[] {
+  const files: string[] = [];
+  const items = fs.readdirSync(dir);
+
+  items.forEach((item) => {
+    const fullPath = path.join(dir, item);
+    if (fs.statSync(fullPath).isDirectory()) {
+      files.push(...getAllMDXFiles(fullPath));
+    } else if (path.extname(item) === ".mdx") {
+      files.push(fullPath);
+    }
+  });
+
+  return files;
+}
+
+export function getCookbookPosts({
+  includeDrafts = true,
+}: { includeDrafts?: boolean } = {}) {
+  const POSTS_PATH = path.join(
+    process.cwd(),
+    "app",
+    "(content)",
+    "cookbook",
+    "posts",
   );
+
+  const posts = getAllMDXFiles(POSTS_PATH).map((filePath) => {
+    const { metadata, content } = readMDXFile(filePath);
+    const slug = path.basename(filePath, path.extname(filePath));
+
+    // Extract directory name from path and check if it matches [...dirname] pattern
+    const dirMatch = filePath.match(/\[{2}(.+?)\]{2}/);
+    if (dirMatch) {
+      const tag = dirMatch[1]?.split("...")[1];
+      metadata.tag = tag;
+    }
+
+    return {
+      metadata,
+      slug,
+      content,
+    };
+  });
+
+  return includeDrafts ? posts : posts.filter((post) => !post.metadata.draft);
 }
 
 export function formatDate(date: string, includeRelative = false) {

@@ -96,16 +96,15 @@ export default async function Blog({ params }: PageProps) {
         {post.metadata.title}
       </h1>
       <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-lg tracking-tighter ">
-          {post.metadata.subtitle}
-        </p>
+        <p className="text-lg tracking-tighter ">{post.metadata.subtitle}</p>
       </div>
       {/* <div className="flex justify-between items-center mt-2 mb-8 text-sm">
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {formatDate(post.metadata.publishedAt)}
         </p>
       </div> */}
-      <article className="prose max-w-none
+      <article
+        className="prose max-w-none
         prose-headings:mt-8 
         prose-headings:font-semibold 
         prose-headings:text-foreground
@@ -125,7 +124,8 @@ export default async function Blog({ params }: PageProps) {
         dark:prose-p:text-foreground
         dark:prose-strong:text-foreground
         dark:prose-code:text-primary dark:prose-code:bg-muted
-        dark:prose-pre:bg-muted dark:prose-pre:text-foreground">
+        dark:prose-pre:bg-muted dark:prose-pre:text-foreground"
+      >
         <CustomMDX source={post.content} />
       </article>
     </section>

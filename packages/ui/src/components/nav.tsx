@@ -1,43 +1,39 @@
 "use client";
 
-
 import Link from "next/link";
 import ModeSwitcher from "@workspace/ui/components/modeSwitcher";
-import { Menu } from 'lucide-react';
+import { Menu } from "lucide-react";
 import {
   Menubar,
   MenubarContent,
   MenubarItem,
   MenubarMenu,
   MenubarTrigger,
-} from "@workspace/ui/components/menubar"
-
-
+} from "@workspace/ui/components/menubar";
 
 export default function Nav() {
-
   return (
     <nav className="flex items-center justify-between mt-8 ml-4 mr-4 mb-4 sm:ml-12 sm:mr-12">
       <Menubar>
-        <MenubarMenu >
-          <MenubarTrigger className="group/toggle hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3" >
+        <MenubarMenu>
+          <MenubarTrigger className="group/toggle hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">
             <Menu className="h-4 w-4" />
           </MenubarTrigger>
-          <MenubarContent >
+          <MenubarContent>
             <MenubarItem asChild>
-            <Link className="items-center flex gap-1" href="/"  >
+              <Link className="items-center flex gap-1" href="/">
                 Home
-            </Link>
+              </Link>
             </MenubarItem>
             <MenubarItem asChild>
-              <Link className="items-center flex gap-1" href="/cookbook" >
-                  Cookbook
+              <Link className="items-center flex gap-1" href="/cookbook">
+                Cookbook
               </Link>
             </MenubarItem>
             <MenubarItem asChild>
               <Link className="items-center flex gap-1" href="/blog">
-                  Blog
-                </Link>
+                Blog
+              </Link>
             </MenubarItem>
           </MenubarContent>
         </MenubarMenu>
@@ -46,7 +42,5 @@ export default function Nav() {
         <ModeSwitcher />
       </div>
     </nav>
-  )
+  );
 }
-
-

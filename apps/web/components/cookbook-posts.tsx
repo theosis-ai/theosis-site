@@ -1,27 +1,57 @@
 import Link from "next/link";
 import { getCookbookPosts } from "@/lib/getCookbookPosts";
+import { Button } from "@workspace/ui/components/button";
 
 export function CookbookPosts() {
-  const allPosts = getCookbookPosts();
+  const allPosts = getCookbookPosts({ includeDrafts: false });
 
   return (
-    <div >
-      {allPosts
-        .sort((a, b) => {
-          return (a.metadata.position || 0) - (b.metadata.position || 0);
-        })
-        .map((post) => (
-          <Link
-            key={post.slug}
-            className="flex flex-col space-y-1 mb-4"
-            href={`/cookbook/${post.slug}`}
-          >
-            <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2 lg:min-w-xl">
-              <p className="w-[200px] tabular-nums">{post.metadata.title}</p>
-              <p >{post.metadata.subtitle}</p>
+    <div className="flex flex-col items-center">
+      {Object.entries(
+        allPosts
+          .sort((a, b) => {
+            if (a.metadata.position < b.metadata.position) {
+              return -1;
+            }
+            return 1;
+          })
+          .reduce(
+            (acc, post) => {
+              const tag = post.metadata.tag;
+              if (tag) {
+                if (!acc[tag]) acc[tag] = [];
+                acc[tag].push(post);
+              }
+              return acc;
+            },
+            {} as Record<string, typeof allPosts>,
+          ),
+      ).map(([tag, posts]) => (
+        <div key={tag}>
+          {posts.map((post) => (
+            <div key={post.slug} className="mb-4">
+              <Link
+                className="flex items-center"
+                href={`/cookbook/${post.slug}`}
+              >
+                <div className="grid grid-cols-[150px_350px_100px] flex-1">
+                  <span>{post.metadata.title}</span>
+                  <span className="text-gray-600 text-muted-foreground">
+                    {post.metadata.subtitle}
+                  </span>
+                  <Button
+                    className="mb-4 text-xs font-bold tracking-tight h-[calc(theme(spacing.7)_-_1px)]"
+                    variant="box"
+                    size="sm"
+                  >
+                    {tag}
+                  </Button>
+                </div>
+              </Link>
             </div>
-          </Link>
-        ))}
+          ))}
+        </div>
+      ))}
     </div>
   );
 }

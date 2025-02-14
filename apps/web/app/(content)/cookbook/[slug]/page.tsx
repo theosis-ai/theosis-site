@@ -92,20 +92,19 @@ export default async function Blog({ params }: PageProps) {
           }),
         }}
       />
-      <h1 className="title font-semibold text-2xl tracking-tighter ">
+      <h1 className="font-semibold text-4xl tracking-wide dark:text-gray-400">
         {post.metadata.title}
       </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-lg tracking-tighter text-neutral-600 dark:text-neutral-400">
-          {post.metadata.subtitle}
-        </p>
+      <div className="flex justify-between items-center mt-2 mb-8 text-sm ">
+        <p className="text-lg tracking-tighter ">{post.metadata.subtitle}</p>
       </div>
       {/* <div className="flex justify-between items-center mt-2 mb-8 text-sm">
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {formatDate(post.metadata.publishedAt)}
         </p>
       </div> */}
-      <article className="prose max-w-none
+      <article
+        className="prose prose-zinc max-w-none
         prose-headings:mt-8 
         prose-headings:font-semibold 
         prose-headings:text-foreground
@@ -121,11 +120,12 @@ export default async function Blog({ params }: PageProps) {
         prose-code:text-primary prose-code:bg-muted
         prose-pre:bg-muted prose-pre:text-foreground
         dark:prose-invert
-        dark:prose-headings:text-foreground
+        dark:prose-headings:text-secondary
         dark:prose-p:text-foreground
         dark:prose-strong:text-foreground
         dark:prose-code:text-primary dark:prose-code:bg-muted
-        dark:prose-pre:bg-muted dark:prose-pre:text-foreground">
+        dark:prose-pre:bg-muted dark:prose-pre:text-foreground"
+      >
         <CustomMDX source={post.content} />
       </article>
     </section>

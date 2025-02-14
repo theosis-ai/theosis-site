@@ -4,7 +4,7 @@ import { getCookbookPosts } from "@/lib/getCookbookPosts";
 export const baseUrl = "https://theosis.ai";
 
 export default async function sitemap() {
-  const blog_posts = getBlogPosts().map((post) => ({
+  const blog_posts = getBlogPosts({ includeDrafts: false }).map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: post.metadata.publishedAt,
   }));
@@ -13,10 +13,12 @@ export default async function sitemap() {
     lastModified: new Date().toISOString().split("T")[0],
   }));
 
-  const cookbook_posts = getCookbookPosts().map((post) => ({
-    url: `${baseUrl}/cookbook/${post.slug}`,
-    lastModified: post.metadata.publishedAt,
-  }));
+  const cookbook_posts = getCookbookPosts({ includeDrafts: false }).map(
+    (post) => ({
+      url: `${baseUrl}/cookbook/${post.slug}`,
+      lastModified: post.metadata.publishedAt,
+    }),
+  );
   const cookbook_routes = ["", "/cookbook"].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString().split("T")[0],

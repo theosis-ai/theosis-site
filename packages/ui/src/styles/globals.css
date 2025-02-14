@@ -50,15 +50,15 @@ body {
     --sidebar-width: 10rem;
     --sidebar-width-collapsed: 4rem;
     --sidebar-transition-duration: 200ms;
-    --sh-class: #953800;      /* Brown - classes/types */
-    --sh-identifier: #24292e;  /* Dark gray - variables/identifiers */
-    --sh-sign: #24292e;       /* Dark gray - punctuation */
-    --sh-property: #0550ae;   /* Blue - properties */
-    --sh-entity: #116329;     /* Green - functions */
-    --sh-jsxliterals: #0550ae;/* Blue - JSX */
-    --sh-string: #0a3069;     /* Dark blue - strings */
-    --sh-keyword: #cf222e;    /* Red - keywords */
-    --sh-comment: #6e7781;    /* Gray - comments */
+    --sh-class: #953800; /* Brown - classes/types */
+    --sh-identifier: #24292e; /* Dark gray - variables/identifiers */
+    --sh-sign: #24292e; /* Dark gray - punctuation */
+    --sh-property: #0550ae; /* Blue - properties */
+    --sh-entity: #116329; /* Green - functions */
+    --sh-jsxliterals: #0550ae; /* Blue - JSX */
+    --sh-string: #0a3069; /* Dark blue - strings */
+    --sh-keyword: #cf222e; /* Red - keywords */
+    --sh-comment: #6e7781; /* Gray - comments */
   }
   .dark {
     --background: 240 10% 3.9%;
@@ -93,15 +93,15 @@ body {
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-    --sh-class: #79c0ff;      /* Light blue - classes/types */
+    --sh-class: #79c0ff; /* Light blue - classes/types */
     --sh-identifier: #c9d1d9; /* Light gray - variables/identifiers */
-    --sh-sign: #79c0ff;       /* Light blue - punctuation */
-    --sh-property: #79c0ff;   /* Light blue - properties */
-    --sh-entity: #7ee787;     /* Light green - functions */
-    --sh-jsxliterals: #a5d6ff;/* Lighter blue - JSX */
-    --sh-string: #a5d6ff;     /* Lighter blue - strings */
-    --sh-keyword: #ff7b72;    /* Soft red - keywords */
-    --sh-comment: #8b949e;    /* Muted gray - comments */
+    --sh-sign: #79c0ff; /* Light blue - punctuation */
+    --sh-property: #79c0ff; /* Light blue - properties */
+    --sh-entity: #7ee787; /* Light green - functions */
+    --sh-jsxliterals: #a5d6ff; /* Lighter blue - JSX */
+    --sh-string: #a5d6ff; /* Lighter blue - strings */
+    --sh-keyword: #ff7b72; /* Soft red - keywords */
+    --sh-comment: #8b949e; /* Muted gray - comments */
   }
 }
 

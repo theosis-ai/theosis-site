@@ -5,7 +5,7 @@ export function BlogPosts() {
   const allPosts = getBlogPosts();
 
   return (
-    <div >
+    <div>
       {allPosts
         .sort((a, b) => {
           if (a.metadata.position < b.metadata.position) {
@@ -21,7 +21,7 @@ export function BlogPosts() {
           >
             <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2 lg:min-w-xl">
               <p className="w-[200px] tabular-nums">{post.metadata.title}</p>
-              <p >{post.metadata.subtitle}</p>
+              <p>{post.metadata.subtitle}</p>
             </div>
           </Link>
         ))}

@@ -8,6 +8,7 @@ type Metadata = {
   summary: string;
   image?: string;
   position: any;
+  draft: boolean;
 };
 
 function parseFrontmatter(fileContent: string) {
@@ -58,10 +59,44 @@ function getMDXData(dir: string) {
   });
 }
 
-export function getBlogPosts() {
-  return getMDXData(
-    path.join(process.cwd(), "app", "(content)", "blog", "posts"),
+export function getBlogPosts({
+  includeDrafts = true,
+}: { includeDrafts?: boolean } = {}) {
+  const POSTS_PATH = path.join(
+    process.cwd(),
+    "app",
+    "(content)",
+    "blog",
+    "posts",
   );
+
+  function getAllMDXFiles(dir: string): string[] {
+    const files: string[] = [];
+    const items = fs.readdirSync(dir);
+
+    items.forEach((item) => {
+      const fullPath = path.join(dir, item);
+      if (fs.statSync(fullPath).isDirectory()) {
+        files.push(...getAllMDXFiles(fullPath));
+      } else if (path.extname(item) === ".mdx") {
+        files.push(fullPath);
+      }
+    });
+
+    return files;
+  }
+
+  const posts = getAllMDXFiles(POSTS_PATH).map((filePath) => {
+    const { metadata, content } = readMDXFile(filePath);
+    const slug = path.basename(filePath, path.extname(filePath));
+    return {
+      metadata,
+      slug,
+      content,
+    };
+  });
+
+  return includeDrafts ? posts : posts.filter((post) => !post.metadata.draft);
 }
 
 export function formatDate(date: string, includeRelative = false) {
