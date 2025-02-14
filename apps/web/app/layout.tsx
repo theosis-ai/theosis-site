@@ -6,7 +6,7 @@ import { ThemeProvider } from "@workspace/ui/components/themeProvider";
 import Nav from "@workspace/ui/components/nav";
 import Footer from "@workspace/ui/components/footer";
 
-const baseUrl = "https://tunelab.theosis.ai";
+const baseUrl = "https://theosis.ai";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     default: "Theosis AI",
     template: "%s | Theosis AI",
   },
-  description: "AI with Meta Stack",
+  description: "AI with Meta Open Source",
   openGraph: {
     title: "Theosis AI",
-    description: "AI with Meta Stack",
+    description: "AI with Meta Open Source",
     url: baseUrl,
     siteName: "Theosis AI",
     locale: "en_US",
