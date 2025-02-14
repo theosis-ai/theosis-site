@@ -6,7 +6,7 @@ export function CookbookPosts() {
   const allPosts = getCookbookPosts({ includeDrafts: false });
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col">
       {Object.entries(
         allPosts
           .sort((a, b) => {
@@ -34,17 +34,17 @@ export function CookbookPosts() {
                 className="flex items-center"
                 href={`/cookbook/${post.slug}`}
               >
-                <div className="grid grid-cols-[150px_350px_100px] flex-1">
-                  <span>{post.metadata.title}</span>
-                  <span className="text-gray-600 text-muted-foreground">
+                <div className="w-full flex flex-col justify left md:flex-row space-x-0 md:space-x-2 lg:min-w-xl">
+                  <span className="w-[150px] tabular-nums">{post.metadata.title}</span>
+                  <span className="w-[300px] text-muted-foreground">
                     {post.metadata.subtitle}
                   </span>
                   <Button
-                    className="mb-4 text-xs font-semibold text-muted-foreground tracking-tight h-[calc(theme(spacing.7)_-_1px)]"
-                    variant="box"
-                    size="sm"
+                  className="w-18"
+                    variant="tag"
+                    size="tag"
                   >
-                    {tag}
+                    {tag.toUpperCase()}
                   </Button>
                 </div>
               </Link>
