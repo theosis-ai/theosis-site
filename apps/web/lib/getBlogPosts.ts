@@ -9,6 +9,7 @@ type Metadata = {
   image?: string;
   position: any;
   draft: boolean;
+  tag?: string;
 };
 
 function parseFrontmatter(fileContent: string) {
@@ -59,8 +60,24 @@ function getMDXData(dir: string) {
   });
 }
 
+function getAllMDXFiles(dir: string): string[] {
+  const files: string[] = [];
+  const items = fs.readdirSync(dir);
+
+  items.forEach((item) => {
+    const fullPath = path.join(dir, item);
+    if (fs.statSync(fullPath).isDirectory()) {
+      files.push(...getAllMDXFiles(fullPath));
+    } else if (path.extname(item) === ".mdx") {
+      files.push(fullPath);
+    }
+  });
+
+  return files;
+}
+
 export function getBlogPosts({
-  includeDrafts = true,
+  includeDrafts = false,
 }: { includeDrafts?: boolean } = {}) {
   const POSTS_PATH = path.join(
     process.cwd(),
@@ -70,25 +87,12 @@ export function getBlogPosts({
     "posts",
   );
 
-  function getAllMDXFiles(dir: string): string[] {
-    const files: string[] = [];
-    const items = fs.readdirSync(dir);
-
-    items.forEach((item) => {
-      const fullPath = path.join(dir, item);
-      if (fs.statSync(fullPath).isDirectory()) {
-        files.push(...getAllMDXFiles(fullPath));
-      } else if (path.extname(item) === ".mdx") {
-        files.push(fullPath);
-      }
-    });
-
-    return files;
-  }
-
   const posts = getAllMDXFiles(POSTS_PATH).map((filePath) => {
     const { metadata, content } = readMDXFile(filePath);
     const slug = path.basename(filePath, path.extname(filePath));
+
+    // Extract directory name from path and check if it matches [...dirname] pattern
+
     return {
       metadata,
       slug,

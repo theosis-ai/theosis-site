@@ -77,7 +77,7 @@ function getAllMDXFiles(dir: string): string[] {
 }
 
 export function getCookbookPosts({
-  includeDrafts = true,
+  includeDrafts = false,
 }: { includeDrafts?: boolean } = {}) {
   const POSTS_PATH = path.join(
     process.cwd(),
@@ -105,7 +105,7 @@ export function getCookbookPosts({
     };
   });
 
-  return includeDrafts ? posts : posts.filter((post) => !post.metadata.draft);
+  return includeDrafts ? posts : posts.filter((post) => post.metadata.draft !== true);
 }
 
 export function formatDate(date: string, includeRelative = false) {
