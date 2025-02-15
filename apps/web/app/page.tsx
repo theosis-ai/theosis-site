@@ -24,14 +24,14 @@ export default function Home() {
       >
         {`Tune Lab`} <ExternalLink height="12" width="12" />
       </Link>
-      <Link
+      {/* <Link
         className="items-center flex gap-1 p-1"
         href="https://llamalab.theosis.ai"
         target="_blank"
         rel="noopener noreferrer"
       >
         {`Llama Lab`} <ExternalLink height="12" width="12" />
-      </Link>
+      </Link> */}
     </div>
   );
 }
