@@ -105,7 +105,7 @@ export function getCookbookPosts({
     };
   });
 
-  return includeDrafts ? posts : posts.filter((post) => post.metadata.draft !== true);
+  return includeDrafts ? posts : posts.filter((post) => !post.metadata.draft);
 }
 
 export function formatDate(date: string, includeRelative = false) {
