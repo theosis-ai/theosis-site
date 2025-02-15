@@ -23,7 +23,7 @@ export function BlogPosts() {
             href={`/blog/${post.slug}`}
           >
             <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2 lg:min-w-xl">
-              <p className="w-[350px] tabular-nums">{post.metadata.title}</p>
+              <p className="w-[400px] tabular-nums">{post.metadata.title}</p>
               <p 
               className="w-[150px] text-muted-foreground"
               >
