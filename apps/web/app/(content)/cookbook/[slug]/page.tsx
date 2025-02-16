@@ -104,7 +104,8 @@ export default async function Blog({ params }: PageProps) {
         </p>
       </div> */}
       <article
-        className="prose prose-zinc max-w-none
+        className="prose
+        prose-zinc
         prose-headings:mt-8 
         prose-headings:font-semibold 
         prose-headings:text-foreground

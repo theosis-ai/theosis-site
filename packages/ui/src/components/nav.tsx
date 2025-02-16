@@ -35,6 +35,11 @@ export default function Nav() {
                 Blog
               </Link>
             </MenubarItem>
+            <MenubarItem asChild>
+              <Link className="items-center flex gap-1" href="/about">
+                About
+              </Link>
+            </MenubarItem>
           </MenubarContent>
         </MenubarMenu>
       </Menubar>
