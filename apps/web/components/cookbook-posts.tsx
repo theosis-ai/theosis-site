@@ -40,7 +40,7 @@ export function CookbookPosts() {
                     {post.metadata.subtitle}
                   </span>
                   <Button
-                  className="w-18"
+                    className="w-18"
                     variant="tag"
                     size="tag"
                   >
