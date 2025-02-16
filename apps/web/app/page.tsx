@@ -14,7 +14,7 @@ export default function Home() {
       </Link>
       <h1 className="text-4xl font-medium tracking-wider mb-4">Theosis AI</h1>
       <p className="font-sans tracking-wider mb-12 text-center">
-        Artificial Intelligence with PyTorch, Llama, Llama Stack, and React
+        Artificial Intelligence with Llama, PyTorch, and React
       </p>
       <Link
         className="items-center flex gap-1 p-1"
